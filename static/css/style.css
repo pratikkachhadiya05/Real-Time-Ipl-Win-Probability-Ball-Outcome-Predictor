@@ -1,0 +1,211 @@
+  
+ 
+        .page-header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 28px 0 22px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-header h1 { font-size: 2.2rem; font-weight: 800; color: #fff; margin: 0; }
+        .page-header p  { color: rgba(255,255,255,.75); margin: 6px 0 0; }
+
+        .card-dark {
+            background: #1c2b38;
+            border: 1px solid #2a3f52;
+            border-radius: 14px;
+            padding: 32px;
+        }
+        .form-label  { color: #a0b4c5; font-size: .875rem; margin-bottom: 4px; }
+        .form-control, .form-select {
+            background: #11202d;
+            border: 1px solid #2a3f52;
+            color: #e0e0e0;
+            border-radius: 8px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: #11202d;
+            border-color: #fdbb2d;
+            color: #fff;
+            box-shadow: 0 0 0 3px rgba(253,187,45,.15);
+        }
+        .form-control::placeholder { color: #4a6278; }
+        .form-select option { background: #11202d; }
+
+        .btn-predict {
+            background: linear-gradient(135deg, #fdbb2d, #e8a020);
+            color: #0f1923;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            padding: 13px;
+            width: 100%;
+            letter-spacing: .5px;
+            transition: opacity .2s;
+        }
+        .btn-predict:hover { opacity: .9; }
+
+        .btn-ball {
+            background: transparent;
+            border: 2px solid #fdbb2d;
+            color: #fdbb2d;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 11px;
+            width: 100%;
+            margin-top: 12px;
+            transition: background .2s, color .2s;
+            cursor: pointer;
+        }
+        .btn-ball:hover { background: #fdbb2d; color: #0f1923; }
+
+        .result-box {
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.05rem;
+            display: none;
+        }
+        .result-box .team-prob { font-size: 1.15rem; font-weight: 700; }
+
+        .win-meter { display: flex; height: 28px; border-radius: 99px; overflow: hidden; margin: 12px 0 6px; }
+        .win-bat   { background: #2ecc71; display: flex; align-items: center; padding-left: 10px;
+                     font-size: .78rem; font-weight: 700; color: #fff; transition: width .8s ease; }
+        .win-bowl  { background: #e74c3c; display: flex; align-items: center; justify-content: flex-end;
+                     padding-right: 10px; font-size: .78rem; font-weight: 700; color: #fff; flex: 1; }
+
+
+        /* Predicted balll cretaed css */
+        .page-header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 28px 0 22px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .page-header h1 { font-size: 2rem; font-weight: 800; color: #fff; letter-spacing: 1px; margin: 0; }
+        .page-header p  { color: rgba(255,255,255,.75); margin: 6px 0 0; }
+
+        .back-btn {
+            display: inline-block;
+            margin: 0 0 18px 0;
+            color: #fdbb2d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-btn:hover { color: #fff; }
+
+        .card-dark {
+            background: #1c2b38;
+            border: 1px solid #2a3f52;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fdbb2d;
+            margin-bottom: 16px;
+        }
+        .form-label  { color: #a0b4c5; font-size: .875rem; margin-bottom: 4px; }
+        .form-control, .form-select {
+            background: #11202d;
+            border: 1px solid #2a3f52;
+            color: #e0e0e0;
+            border-radius: 8px;
+        }
+        .form-control:focus, .form-select:focus {
+            background: #11202d;
+            border-color: #fdbb2d;
+            color: #fff;
+            box-shadow: 0 0 0 3px rgba(253,187,45,.15);
+        }
+        .form-control::placeholder { color: #4a6278; }
+        .form-select option { background: #11202d; }
+
+        .btn-predict {
+            background: linear-gradient(135deg, #fdbb2d, #e8a020);
+            color: #0f1923;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            padding: 13px;
+            width: 100%;
+            letter-spacing: .5px;
+            transition: opacity .2s;
+        }
+        .btn-predict:hover { opacity: .9; }
+
+        /* ── Result panel ── */
+        #result { display: none; }
+
+        .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+        @media (max-width: 576px) { .result-grid { grid-template-columns: 1fr; } }
+
+        .stat-box {
+            background: #11202d;
+            border: 1px solid #2a3f52;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-box .label { font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; color: #a0b4c5; }
+        .stat-box .value { font-size: 1.6rem; font-weight: 800; color: #fdbb2d; margin-top: 4px; }
+        .stat-box .sub   { font-size: .8rem; color: #6a8599; margin-top: 2px; }
+
+        /* probability bars */
+        .prob-row { margin-bottom: 12px; }
+        .prob-label { display: flex; justify-content: space-between; font-size: .85rem; margin-bottom: 4px; }
+        .prob-label span:first-child { color: #c8d8e4; }
+        .prob-label span:last-child  { color: #fdbb2d; font-weight: 700; }
+        .prob-track {
+            height: 10px; border-radius: 99px;
+            background: #11202d; overflow: hidden;
+        }
+        .prob-fill {
+            height: 100%; border-radius: 99px;
+            transition: width .6s ease;
+        }
+        .c-dot      { background: #64b5f6; }
+        .c-runs     { background: #81c784; }
+        .c-boundary { background: #ffb74d; }
+        .c-wicket   { background: #e57373; }
+
+        /* win probability meter */
+        .win-meter { position: relative; height: 28px; border-radius: 99px; overflow: hidden; margin: 16px 0 8px; display: flex; }
+        .win-bat   { background: #2ecc71; display: flex; align-items: center; justify-content: flex-start;
+                     padding-left: 10px; font-size: .78rem; font-weight: 700; color: #fff; transition: width .8s ease; }
+        .win-bowl  { background: #e74c3c; display: flex; align-items: center; justify-content: flex-end;
+                     padding-right: 10px; font-size: .78rem; font-weight: 700; color: #fff; flex: 1; }
+
+        .winner-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #fdbb2d, #e8a020);
+            color: #0f1923;
+            font-weight: 800;
+            font-size: .9rem;
+            padding: 6px 18px;
+            border-radius: 99px;
+            margin-top: 8px;
+        }
+
+        .event-tag {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 99px;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+        .tag-dot      { background: #1e3a5a; color: #64b5f6; }
+        .tag-runs     { background: #1a3a1a; color: #81c784; }
+        .tag-boundary { background: #3a2a10; color: #ffb74d; }
+        .tag-wicket   { background: #3a1010; color: #e57373; }
+
+        .spinner { display: inline-block; width: 18px; height: 18px;
+                   border: 3px solid rgba(255,255,255,.3); border-top-color: #fdbb2d;
+                   border-radius: 50%; animation: spin .7s linear infinite; vertical-align: middle; margin-right: 8px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
