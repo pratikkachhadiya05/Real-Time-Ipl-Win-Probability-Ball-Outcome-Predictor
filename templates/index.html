@@ -114,7 +114,7 @@ async function predictWin() {
     const wickets      = parseInt(document.getElementById('wickets').value, 10);
 
 
-
+    // validation of the each data
     if (!batting_team || !bowling_team || !city || isNaN(target) || isNaN(score) || isNaN(overs) || isNaN(wickets)) {
         alert('Please fill in all fields.');
         return;
@@ -123,7 +123,18 @@ async function predictWin() {
         alert('Batting and Bowling teams cannot be the same!');
         return;
     }
-
+    if(score>=target) {
+        alert('Current score should as less then the target score!')
+        return;
+    }
+    if(overs < 0 || overs>20 ){
+        alert('Overs should as 0 to 20')
+        return;
+    }
+    if(wickets < 0 || wickets > 10){
+        alert('Wickets must be 1 to 10')
+        return;
+    }
     // locally data store 
     localStorage.setItem("matchData", JSON.stringify({
     batting_team: batting_team,
