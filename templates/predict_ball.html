@@ -205,6 +205,43 @@ async function predict() {
         alert('Batting and bowling teams cannot be the same.');
         return;
     }
+    if(overs<0 || overs>20){
+        alert("Over must be range of the 0 or 20!")
+        return;
+    }
+    if(score>=target){
+        alert("Current score must be less then Target score!")
+        return;
+    }
+
+    if(wickets<0 || wickets>10){
+        alert("wickets must be the range of the 0 to 10!")
+        return;
+    }
+
+    //  validation for ball prediction model
+    if(last_5_balls_runs>=score || last_5_balls_runs<0){
+        alert("Invalid detail in the last_5_balls_runs!")
+        return;
+    }
+    if(last_18_balls_runs>=score || last_18_balls_runs<0){
+        alert("Invalid details in last_18_balls_runs!")
+        return;
+    }
+    if(partnership_runs>=score || partnership_runs<0){
+        alert("Invalid details in partnership runs!")
+        return;
+    }
+    if(dots_last_6<0 || dots_last_6>6 ){
+        alert("Plese valid fill valuses in dots_last_6!")
+        return;
+    }
+
+    if(last_6_balls_wickets<0 || last_6_balls_wickets>10){
+        alert("Please valid  fill valuse in last_6_balls_wickets!")
+        return;
+    }
+    
 
     // ── Loading state ───────────────────────────────────────────────────────
     const btn = document.getElementById('predictBtn');
